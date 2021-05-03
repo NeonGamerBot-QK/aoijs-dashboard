@@ -1,5 +1,5 @@
 const fetech = require(`node-fetch`);//p
-const config = require(`./config`)
+const config = require(`./config.json`)
 const TOKEN = config.token;
 const guild = 'the guild id'
 async function adduser(req) {
