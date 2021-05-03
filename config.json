@@ -1,0 +1,9 @@
+{
+"monguri": "urmongurihere",
+"token": "bot token",
+"secret": "client_secret",
+"id": "bots id",
+"session_secret": "sessionsecret",
+"ownerID": "ownerid", 
+}
+
