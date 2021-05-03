@@ -1,5 +1,5 @@
 const app = require('express')();
-const config = require('./config')
+const config = require('./config.json')
 const passport = require('passport')
 var DiscordStrategy = require('passport-discord').Strategy;
 const session = require('express-session')
