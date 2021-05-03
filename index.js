@@ -11,14 +11,16 @@ prefix: ['dash']
 const bot_info = {
 name: bot.client.user.username,
 avatar: bot.client.user.avatarURL({ dynamic: true, size: 1024}),
-tag: bot.client.user.tag
+tag: bot.client.user.tag,
+id: bot.client.user.id
 }
 app.set('view engine', 'ejs')
 app.get('/', (req,res) => {
 res.render('index', {
 bot: bot_info,
 client: bot.client,
-req: req
+req: req,
+avatar: `https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}`
 })
 })
 var scopes = ['identify', 'guilds', 'guilds.join'];
@@ -56,7 +58,7 @@ var scopes = ['identify', 'guilds', 'guilds.join'];
  
  async function(accessToken, refreshToken, profile, cb) {
    cb(null, profile)
-  await db.set('last_user', profile)
+ // await db.set('last_user', profile)
   const guilds = profile.guilds
 
   const keys = [accessToken, refreshToken]
