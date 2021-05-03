@@ -1,0 +1,40 @@
+<% if(!req.user) { %>
+<html>
+<head>
+<%- include('header'); %>
+<title> <%=bot_info.tag%> </title>
+<style>
+body {
+color: white;
+background-color: black;
+}
+</style>
+</head>
+<body>
+<h1> <%=bot_info.name%>  <img src="<%=bot_info.avatar"> </h1>
+<a href="/auth/discord"> login </a>
+<h3> bruh this the site </h3>
+<!-- add your html and css and blah yk mine is a nice background of black -->
+</body>
+</html>
+<% } else { %>
+
+<html>
+<head>
+<%- include('header'); %>
+<title> <%=bot_info.tag%> </title>
+<style>
+body {
+color: white;
+background-color: black;
+}
+</style>
+</head>
+<body>
+<h1> <%=bot_info.name%>  <img src="<%=bot_info.avatar"> </h1>
+<a href='/guilds'> open dashboard </a>
+<h3> bruh this the site is not <b> bussin </b> </h3>
+<!-- add your html and css and blah yk mine is a nice background of black -->
+</body>
+</html>
+<% } %>
